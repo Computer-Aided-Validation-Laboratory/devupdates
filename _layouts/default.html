@@ -21,7 +21,7 @@
     <main class="container">
         {% for post in site.posts limit: 5 %}
             <article class="blog-post">
-                <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+                <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
                 <p class="meta"><time datetime="{{ post.date | date: "%Y-%m-%d" }}"></time></p>
                 <p>{{ post.excerpt }}</p>
                 <p>{{ content }}</p>
