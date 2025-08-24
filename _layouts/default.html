@@ -23,9 +23,10 @@
         {{ content }}
         {% for post in site.posts limit: 5 %}
             <article class="blog-post">
-                <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-                <p class="meta"><time datetime="{{ post.date | date: "%Y-%m-%d" }}"></time></p>
-                <p>{{ post.excerpt }}</p>
+                <h2>{{ post.title }}</a></h2>
+                <p class="meta">{{ post.date }}></p>
+                <p class="preview">{{ post.excerpt }}</p>
+                <p class="meta"><a href="{{ site.baseurl }}{{ post.url }}">View more...</a></p>
             </article>
         {% endfor %}
     </main>
