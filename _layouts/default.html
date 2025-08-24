@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="{{ "/static/basic.css" | absolute_url }}">
+<head>
+    {% include header.html %}
+</head>
+<body>
+
+    <header>
+        <h1>Title</h1>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a href="#">Loc1</a>
+            <a href="#">Loc2</a>
+            <a href="#">Loc3</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        
+        <article class="blog-post">
+            <h2>{{ page.title }}</h2>
+            <p class="meta">Subtitle</p>
+            <p>{{ content }}</p>
+        </article>
+
+    </main>
+
+    <footer>
+        {% include footer.html %}
+    </footer>
+
+</body>
+</html>
